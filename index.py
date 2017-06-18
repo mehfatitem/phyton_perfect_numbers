@@ -7,7 +7,17 @@ print("Content-Type: text/html")    # HTML is following
 print()
 
 title = "Anahtar Kelimeyi Giriniz..."
-template = "<html><form align='center' id='form' name='form' action='index.py' method='post'><input type='text' id='input' name='input' placeholder='"+title+"' title='"+title+"'/></br></br><input type='submit' id='button' name='button' value='Hesapla'/></form></html>"
+
+template = "<html>"
+template += "<head></head>"
+template += "<body>"
+template += "<form align='center' id='form' name='form' action='index.py' method='post'>"
+template += "<input type='text' id='input' name='input' placeholder='"+title+"' title='"+title+"'/></br></br>"
+template += "<input type='submit' id='button' name='button' value='Hesapla'/>"
+template += "</form>"
+template += "</body>"
+template += "</html>"
+
 print(template)
 
 def showMessage(msg , color = "red" , weight = "bold") :
